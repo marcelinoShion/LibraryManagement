@@ -10,6 +10,7 @@ public class BookController {
         boolean working = true;
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
+        String option;
         while(working){
             System.out.println("________________________________");
             System.out.println("[1] Add a book");
@@ -22,8 +23,9 @@ public class BookController {
             System.out.println("[0] Close");
             System.out.println("________________________________");
             try {
-                choice = scanner.nextInt();
-            } catch (InputMismatchException e) {
+                option = scanner.nextLine();
+                choice = Integer.parseInt(option);
+            } catch (NumberFormatException e) {
                 e.printStackTrace();
                 System.out.println("Invalid choice");
             }finally {

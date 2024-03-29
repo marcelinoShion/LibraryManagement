@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.example.controller.BookController;
+import org.example.controller.StatisticController;
 import org.example.controller.StudentController;
 
 import java.util.Scanner;
@@ -17,6 +18,7 @@ public class Main {
             System.out.println("________________________________");
             System.out.println("[1] Student Menu");
             System.out.println("[2] Book Menu");
+            System.out.println("[3] Statistics Menu");
             System.out.println("[0] Close");
             System.out.println("________________________________");
 
@@ -32,7 +34,9 @@ public class Main {
                 } else if (choice == 1) {
                     StudentController.studentMenu();
                 } else if (choice == 2) {
-                        BookController.bookMenu();
+                    BookController.bookMenu();
+                } else if (choice == 3) {
+                    StatisticController.StatisticMenu();
                 } else {
                     System.out.println("Invalid number");
                 }
